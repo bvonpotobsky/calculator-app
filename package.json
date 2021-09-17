@@ -4,7 +4,7 @@
   "description": "Calculator app with Vanilla JS",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "node-sass -w src/styles/sass/style.scss src/styles/style.css"
+    "watch:sass": "node-sass -w src/assets/styles/sass/style.scss src/assets/styles/style.css"
   },
   "author": "@bvonpotobsky",
   "license": "ISC",
