@@ -1,10 +1,26 @@
-const buttons = Array.from(document.querySelectorAll(".numbers input"));
-const input = document.getElementById("input");
+const numberButtons = document.querySelectorAll("[data-number]");
+const operationButtons = document.querySelectorAll("[data-operation]");
+const equalButton = document.querySelector("[data-equal]");
+const deleteButton = document.querySelector("[data-delete]");
+const allClearButton = document.querySelector("[data-all-clear]");
+const previousOperandContent = document.querySelector("[data-previous]");
+const currentOperandContent = document.querySelector("[data-current]");
 
-buttons.forEach((button) => {
-  button.addEventListener("click", handleClick);
-});
+class Calculator {
+  constructor(previousOperandContent, currentOperandContent) {
+    this.previousOperandContent = previousOperandContent;
+    this.currentOperandContent = currentOperandContent;
+  }
 
-function handleClick(e) {
-  console.log(e);
+  clear() {}
+
+  delete() {}
+
+  appendNumber(number) {}
+
+  chooseOperation(operation) {}
+
+  compute() {}
+
+  updateDisplay() {}
 }

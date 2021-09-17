@@ -13,109 +13,34 @@
     />
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/style.css" />
+    <script src="./calculator.js" defer></script>
     <title>Calculator App</title>
   </head>
   <body>
-    <div class="container">
-      <h1>calc</h1>
-
-      <div class="display">
-        <input id="input" class="display__input" type="text" />
+    <section class="calculator-grid">
+      <div class="output">
+        <div data-previus class="output__previous">123</div>
+        <div data-current class="output__current">435</div>
       </div>
 
-      <div class="numbers">
-        <input
-          class="numbers__button numbers__button--7"
-          type="button"
-          value="7"
-        />
-        <input
-          class="numbers__button numbers__button--8"
-          type="button"
-          value="8"
-        />
-        <input
-          class="numbers__button numbers__button--9"
-          type="button"
-          value="9"
-        />
-        <input
-          class="numbers__button numbers__button--del"
-          type="button"
-          value="DEL"
-        />
-        <input
-          class="numbers__button numbers__button--4"
-          type="button"
-          value="4"
-        />
-        <input
-          class="numbers__button numbers__button--5"
-          type="button"
-          value="5"
-        />
-        <input
-          class="numbers__button numbers__button--6"
-          type="button"
-          value="6"
-        />
-        <input
-          class="numbers__button numbers__button--plus"
-          type="button"
-          value="+"
-        />
-        <input
-          class="numbers__button numbers__button--1"
-          type="button"
-          value="1"
-        />
-        <input
-          class="numbers__button numbers__button--2"
-          type="button"
-          value="2"
-        />
-        <input
-          class="numbers__button numbers__button--3"
-          type="button"
-          value="3"
-        />
-        <input
-          class="numbers__button numbers__button--minus"
-          type="button"
-          value="-"
-        />
-        <input
-          class="numbers__button numbers__button--dot"
-          type="button"
-          value="."
-        />
-        <input
-          class="numbers__button numbers__button--0"
-          type="button"
-          value="0"
-        />
-        <input
-          class="numbers__button numbers__button--divide"
-          type="button"
-          value="/"
-        />
-        <input
-          class="numbers__button numbers__button--multiply"
-          type="button"
-          value="x"
-        />
-        <input
-          class="numbers__button numbers__button--reset"
-          type="button"
-          value="RESET"
-        />
-        <input
-          class="numbers__button numbers__button--calc"
-          type="button"
-          value="="
-        />
-      </div>
-    </div>
-    <script src="./calculator.js"></script>
+      <button data-all-clear class="span-two">AC</button>
+      <button data-delete>DEL</button>
+      <button data-operation>÷</button>
+      <button data-number>1</button>
+      <button data-number>2</button>
+      <button data-number>3</button>
+      <button data-operation>*</button>
+      <button data-number>4</button>
+      <button data-number>5</button>
+      <button data-number>6</button>
+      <button data-operation>+</button>
+      <button data-number>7</button>
+      <button data-number>8</button>
+      <button data-number>9</button>
+      <button data-operation>-</button>
+      <button data-number>.</button>
+      <button data-number>0</button>
+      <button data-equal class="span-two">=</button>
+    </section>
   </body>
 </html>

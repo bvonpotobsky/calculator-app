@@ -20,97 +20,57 @@ html {
 }
 
 body {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 100%;
-  min-height: 100vh;
-  max-height: 100vh;
-  font-size: 1.6rem;
-  font-family: $font-main;
-  background-color: $color-main;
+  font-size: 2rem;
+  font-weight: normal;
+  background-color: #394764;
+  color: #f4f4f4;
 }
 
-.container {
-  transform: translateY(-50%);
-  display: block;
-  width: 45rem;
-  height: 40rem;
-  max-width: 40rem;
-
-  h1 {
-    font-size: 3rem;
-    color: #f4f4f4;
-    margin-bottom: 1rem;
-  }
-}
-
-.display {
-  display: block;
-  width: 100%;
-  height: 5rem;
-
-  border-radius: 0.5rem;
-  background-color: $color-secondary;
-
-  &__input {
-    width: 100%;
-    height: 100%;
-    outline: none;
-    background-color: transparent;
-    border: none;
-  }
-}
-
-.numbers {
+.calculator-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
-    "7 8 9 del"
-    "4 5 6 plus"
-    "1 2 3 minus"
-    "dot 0 divide multiply"
-    "reset reset calc calc";
-  grid-row-gap: 1rem;
-  justify-items: center;
-  margin: 0 auto;
-  margin-top: 2rem;
-  padding: 2rem 1rem;
-  border-radius: 0.5rem;
-  background-color: $color-secondary;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
 
-  &__button {
-    height: 4rem;
-    width: 7.5rem;
-    border: none;
-    border-bottom: 3px solid rgba(black, 0.6);
-    border-radius: 0.5rem;
-    font-weight: bold;
+  grid-template-columns: repeat(4, 10rem);
+  grid-template-rows: minmax(12rem, auto) repeat(5, 10rem);
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 3.5rem;
+  border: 1px solid white;
+  outline: none;
+  color: #f4f4f4;
+  background-color: rgba(#181f33, 0.7);
+
+  &:hover {
+    background-color: rgba(#181f33, 1);
+  }
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(black, 0.75);
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: keep-all;
+
+  &__previus {
+    color: rgba(white, 0.75);
     font-size: 2rem;
-    background-color: $color-light;
-    cursor: pointer;
+  }
 
-    &--del {
-      font-size: 1.5rem;
-      color: #f4f4f4;
-      background-color: $color-main;
-    }
-
-    &--reset {
-      width: 90%;
-      grid-column: 1 / 3;
-      font-size: 1.5rem;
-      color: #f4f4f4;
-      background-color: $color-main;
-    }
-
-    &--calc {
-      width: 90%;
-      grid-column: 3 / 5;
-      color: #f4f4f4;
-      background-color: $color-warning;
-    }
+  &__current {
+    color: white;
+    font-size: 3rem;
   }
 }
