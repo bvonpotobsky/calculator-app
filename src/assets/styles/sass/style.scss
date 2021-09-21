@@ -1,9 +1,9 @@
 // Variables
-$font-main: "Poppins", sans-serif;
+$font-main: "Nunito", sans-serif;
 
-$color-main: #394764;
-$color-secondary: #181f33;
-$color-light: #eae3db;
+$color-main: #525a78;
+$color-secondary: #212529;
+$color-light: #e9ecef;
 $color-warning: #d13f2f;
 
 *,
@@ -20,32 +20,45 @@ html {
 }
 
 body {
+  width: 100%;
+  max-height: 100vh;
+  font: $font-main;
   font-size: 2rem;
   font-weight: normal;
-  background-color: #394764;
-  color: #f4f4f4;
+  background-color: rgba($color-secondary, 1);
 }
 
 .calculator-grid {
   display: grid;
   justify-content: center;
   align-content: center;
-  min-height: 100vh;
-
   grid-template-columns: repeat(4, 10rem);
   grid-template-rows: minmax(12rem, auto) repeat(5, 10rem);
+
+  width: fit-content;
+  height: fit-content;
+  margin: 0 auto;
+  margin-top: 10rem;
+  font-family: $font-main;
+  font-weight: 700;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  border: 2px solid $color-light;
+  overflow: hidden;
 }
 
 .calculator-grid > button {
   cursor: pointer;
+  font-family: $font-main;
+  font-weight: 700;
   font-size: 3.5rem;
-  border: 1px solid white;
   outline: none;
-  color: #f4f4f4;
-  background-color: rgba(#181f33, 0.7);
+  border: 2px solid $color-light;
+  color: $color-light;
+  background-color: rgba($color-main, 1);
 
   &:hover {
-    background-color: rgba(#181f33, 1);
+    background-color: rgba($color-main, 0.5);
   }
 }
 
@@ -55,22 +68,25 @@ body {
 
 .output {
   grid-column: 1 / -1;
-  background-color: rgba(black, 0.75);
   display: flex;
   align-items: flex-end;
   justify-content: space-around;
   flex-direction: column;
   padding: 1rem;
+  border: 2px solid $color-light;
+  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 0.5rem;
+  background-color: rgba($color-main, 0.5);
   word-wrap: break-word;
   word-break: keep-all;
 
-  &__previus {
-    color: rgba(white, 0.75);
-    font-size: 2rem;
+  &__previous {
+    color: $color-light;
+    font-size: 2.5rem;
   }
 
   &__current {
-    color: white;
+    color: $color-light;
     font-size: 3rem;
   }
 }
